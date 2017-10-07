@@ -1,0 +1,98 @@
+{
+  "name": "roland.codes",
+  "version": "2.0.0",
+  "author": "Roland Warmerdam (https://roland.codes)",
+  "repository": "Rowno/roland.codes",
+  "homepage": "https://roland.codes",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "node server/boot.js",
+    "build": "gulp build --prod",
+    "test": "xo && gulp alex"
+  },
+  "engines": {
+    "node": "^8"
+  },
+  "browser": {
+    "nunjucks": "nunjucks/browser/nunjucks-slim"
+  },
+  "dependencies": {
+    "autoprefixer": "^6.0.0",
+    "babel-core": "^6.0.14",
+    "babel-polyfill": "^6.0.14",
+    "babel-preset-es2015": "^6.0.14",
+    "babelify": "^7.0.2",
+    "browserify": "^14.1.0",
+    "cheerio": "^0.22.0",
+    "del": "^2.0.0",
+    "express": "^4.15.3",
+    "fastclick": "^1.0.6",
+    "globby": "^6.1.0",
+    "gulp": "^3.9.0",
+    "gulp-alex": "^3.0.0",
+    "gulp-changed": "^2.0.0",
+    "gulp-front-matter": "^1.2.3",
+    "gulp-if": "^2.0.0",
+    "gulp-livereload": "^3.8.0",
+    "gulp-minify-css": "^1.2.0",
+    "gulp-postcss": "^6.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "gulp-uglify": "^2.0.1",
+    "gulpsmith": "^0.5.3",
+    "he": "^1.1.1",
+    "helmet": "^3.6.1",
+    "highlight.js": "^9.9.0",
+    "jquery": "^3.0.0-alpha1",
+    "metalsmith": "^2.0.1",
+    "metalsmith-collections": "^0.9.0",
+    "metalsmith-drafts": "0.0.1",
+    "metalsmith-excerpts": "^1.0.0",
+    "metalsmith-layouts": "^1.0.0",
+    "metalsmith-markdownit": "^0.4.0",
+    "metalsmith-permalinks": "^0.5.0",
+    "minimist": "^1.1.1",
+    "mold-source-map": "^0.4.0",
+    "moment": "^2.10.6",
+    "nunjucks": "^3.0.0",
+    "picturefill": "^3.0.1",
+    "run-sequence": "^1.1.1",
+    "simple-timeago": "^1.0.0",
+    "through2": "^2.0.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0",
+    "watchify": "^3.2.3",
+    "whatwg-fetch": "^2.0.3",
+    "winston": "^2.3.0"
+  },
+  "devDependencies": {
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "esnext": true,
+    "space": true,
+    "semicolon": false,
+    "overrides": [
+      {
+        "files": "app/**/*.js",
+        "envs": [
+          "browser"
+        ]
+      }
+    ],
+    "ignores": [
+      "app/**/vendor/**/*",
+      "app/static/demos/**/*"
+    ],
+    "rules": {
+      "import/no-unassigned-import": "off"
+    }
+  },
+  "now": {
+    "alias": "roland.codes",
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
+}
